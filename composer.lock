@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b3fee81095cfb28bfa871470951551f3",
+    "hash": "eb54dd08b86ecc5ebabfbb1ca99dfd3d",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -868,21 +868,21 @@
         },
         {
             "name": "refinery29/php-cs-fixer-config",
-            "version": "0.1.4",
+            "version": "0.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/refinery29/php-cs-fixer-config.git",
-                "reference": "049e5a80c18473d5adf6a1232255bd9c0df30879"
+                "reference": "f90e5958991a568e9352119a66b7551b1177bdb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/refinery29/php-cs-fixer-config/zipball/049e5a80c18473d5adf6a1232255bd9c0df30879",
-                "reference": "049e5a80c18473d5adf6a1232255bd9c0df30879",
+                "url": "https://api.github.com/repos/refinery29/php-cs-fixer-config/zipball/f90e5958991a568e9352119a66b7551b1177bdb0",
+                "reference": "f90e5958991a568e9352119a66b7551b1177bdb0",
                 "shasum": ""
             },
             "require": {
                 "fabpot/php-cs-fixer": "2.0.*@dev",
-                "php": ">=5.5"
+                "php": ">=5.4"
             },
             "require-dev": {
                 "codeclimate/php-test-reporter": "^0.1.2",
@@ -905,7 +905,7 @@
                 }
             ],
             "description": "Provides a configuration for fabpot/php-cs-fixer, used within Refinery29.",
-            "time": "2015-09-04 15:09:45"
+            "time": "2015-09-14 12:18:40"
         },
         {
             "name": "satooshi/php-coveralls",
@@ -1401,12 +1401,12 @@
             "version": "v2.7.4",
             "source": {
                 "type": "git",
-                "url": "git@github.com:symfony/Console.git",
+                "url": "https://github.com/symfony/Console.git",
                 "reference": "f1f7376766394f409b9b33a57a5675a52f8aad93"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/f1f7376766394f409b9b33a57a5675a52f8aad93",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/9ff9032151186bd66ecee727d728f1319f52d1d8",
                 "reference": "f1f7376766394f409b9b33a57a5675a52f8aad93",
                 "shasum": ""
             },
@@ -1765,7 +1765,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.5"
+        "php": ">=5.4"
     },
     "platform-dev": []
 }

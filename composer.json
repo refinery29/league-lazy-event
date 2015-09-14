@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "php": ">=5.5",
+        "php": ">=5.4",
         "container-interop/container-interop": "^1.1",
         "league/event": "^2.1.2"
     },
@@ -18,7 +18,7 @@
         "codeclimate/php-test-reporter": "0.2.0",
         "fabpot/php-cs-fixer": "2.0.*@dev",
         "phpunit/phpunit": "^4.8.7",
-        "refinery29/php-cs-fixer-config": "0.1.4"
+        "refinery29/php-cs-fixer-config": "0.1.5"
     },
     "autoload": {
         "psr-4": {

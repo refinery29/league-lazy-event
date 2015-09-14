@@ -20,12 +20,12 @@ class LazyListenerTest extends \PHPUnit_Framework_TestCase
 
         $listener = new LazyListener($alias, $container);
 
-        $this->assertInstanceOf(ListenerInterface::class, $listener);
+        $this->assertInstanceOf('League\Event\ListenerInterface', $listener);
     }
 
     public function testGetListenerWhenActualListenerNotManagedByContainer()
     {
-        $this->setExpectedException(BadMethodCallException::class);
+        $this->setExpectedException('BadMethodCallException');
 
         $alias = 'foo';
 
@@ -45,7 +45,7 @@ class LazyListenerTest extends \PHPUnit_Framework_TestCase
 
     public function testGetListenerWhenFetchingActualListenerImpossible()
     {
-        $this->setExpectedException(BadMethodCallException::class);
+        $this->setExpectedException('BadMethodCallException');
 
         $alias = 'foo';
 
@@ -65,7 +65,7 @@ class LazyListenerTest extends \PHPUnit_Framework_TestCase
 
     public function testGetListenerWhenActualListenerDoesNotImplementListenerInterface()
     {
-        $this->setExpectedException(BadMethodCallException::class);
+        $this->setExpectedException('BadMethodCallException');
 
         $alias = 'foo';
 
@@ -250,7 +250,7 @@ class LazyListenerTest extends \PHPUnit_Framework_TestCase
      */
     private function getContainerMock()
     {
-        return $this->getMockBuilder(ContainerInterface::class)->getMock();
+        return $this->getMockBuilder('Interop\Container\ContainerInterface')->getMock();
     }
 
     /**
@@ -258,7 +258,7 @@ class LazyListenerTest extends \PHPUnit_Framework_TestCase
      */
     private function getEventMock()
     {
-        return $this->getMockBuilder(EventInterface::class)->getMock();
+        return $this->getMockBuilder('League\Event\EventInterface')->getMock();
     }
 
     /**
@@ -266,7 +266,7 @@ class LazyListenerTest extends \PHPUnit_Framework_TestCase
      */
     private function getLazyListenerMock()
     {
-        return $this->getMockBuilder(LazyListener::class)
+        return $this->getMockBuilder('Refinery29\Event\LazyListener')
             ->disableOriginalConstructor()
             ->getMock()
         ;
@@ -277,6 +277,6 @@ class LazyListenerTest extends \PHPUnit_Framework_TestCase
      */
     private function getListenerMock()
     {
-        return $this->getMockBuilder(ListenerInterface::class)->getMock();
+        return $this->getMockBuilder('League\Event\ListenerInterface')->getMock();
     }
 }

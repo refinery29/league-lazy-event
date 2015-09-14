@@ -1,0 +1,15 @@
+{
+    "name": "refinery29/league-lazy-event",
+    "description": "Provides a LazyListener for use with league/event which allows for lazy fetching of actual listeners.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andreas Möller",
+            "email": "andreas.moller@refinery29.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5"
+    }
+}

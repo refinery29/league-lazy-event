@@ -9,19 +9,6 @@ allows for lazy fetching of an actual listener from the composed container.
 
 ## Installation
 
-Reference the package location `composer.json` (not on Packagist yet):
-
-```json
-{
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "git@github.com:refinery29/league-lazy-event"
-        }
-    ]
-}
-```
-
 Run
 
 ```

@@ -10,11 +10,23 @@
         }
     ],
     "require": {
-        "php": ">=5.5"
+        "php": ">=5.5",
+        "container-interop/container-interop": "^1.1",
+        "league/event": "^2.1.2"
     },
     "require-dev": {
         "fabpot/php-cs-fixer": "2.0.*@dev",
         "phpunit/phpunit": "^4.8.7",
         "refinery29/php-cs-fixer-config": "0.1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Refinery29\\Event\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Refinery29\\Event\\Test\\": "tests"
+        }
     }
 }

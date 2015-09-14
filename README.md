@@ -6,3 +6,65 @@
 
 This repository provides a `LazyListener` for use with [`league/event`](http://github.com/thephpleague/event), which 
 allows for lazy fetching of an actual listener from the composed container.
+
+## Installation
+
+Reference the package location `composer.json` (not on Packagist yet):
+
+```json
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:refinery29/league-lazy-event"
+        }
+    ]
+}
+```
+
+Run
+
+```
+$ composer require refinery29/league-lazy-event
+```
+
+## Usage
+
+Register your actual listener as a service with the container:
+
+```php
+use League\Container;
+
+$container = new Container();
+
+$container->share(ExpensiveListener::class, function () {
+    /*
+     * here, some heavy lifting occurs that creates the actual listener,
+     * which should implement the ListenerInterface
+     */
+    return $listener;
+});
+```
+
+Then register a `LazyListener`, composing the alias and the container:
+
+```php
+use League\Event\Emitter;
+use Refinery29\Event\LazyListener;
+
+$emitter->addListener(ContentChangedEvent::class, LazyListener::fromAlias(
+    ExpensiveListener::class,
+    $container
+));
+```
+
+Trigger your events as needed!
+
+```php
+$emitter->emit(ContentChangedEvent::class, new ContentChangedEvent(
+    $url, 
+    new DateTimeImmutable()
+);
+```
+
+:+1: Listeners are only ever fetched from the container when the event is handled.

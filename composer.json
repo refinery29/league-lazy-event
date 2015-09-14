@@ -11,6 +11,7 @@
     ],
     "require": {
         "php": ">=5.5",
+        "container-interop/container-interop": "^1.1",
         "league/event": "^2.1.2"
     },
     "require-dev": {

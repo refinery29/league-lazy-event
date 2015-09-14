@@ -15,6 +15,7 @@
         "league/event": "^2.1.2"
     },
     "require-dev": {
+        "codeclimate/php-test-reporter": "0.2.0",
         "fabpot/php-cs-fixer": "2.0.*@dev",
         "phpunit/phpunit": "^4.8.7",
         "refinery29/php-cs-fixer-config": "0.1.4"

@@ -37,4 +37,4 @@ script:
   - vendor/bin/php-cs-fixer fix --config-file=.php_cs --verbose --diff --dry-run
 
 after_success:
-  - if [[ "$REPORT_COVERAGE" == "true" && "$IS_MERGE_TO_MASTER" == "true" ]]; then bin/report-coverage; fi
+  - if [[ "$REPORT_COVERAGE" == "true" && "$IS_MERGE_TO_MASTER" == "true" ]]; then vendor/bin/test-reporter; fi

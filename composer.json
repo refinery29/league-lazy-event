@@ -13,6 +13,8 @@
         "php": ">=5.5"
     },
     "require-dev": {
-        "phpunit/phpunit": "^4.8.7"
+        "fabpot/php-cs-fixer": "2.0.*@dev",
+        "phpunit/phpunit": "^4.8.7",
+        "refinery29/php-cs-fixer-config": "0.1.4"
     }
 }

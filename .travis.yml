@@ -16,6 +16,7 @@ matrix:
 cache:
   directories:
     - $HOME/.composer/cache
+    - $HOME/.php-cs-fixer
 
 before_install:
   - composer self-update
@@ -25,5 +26,9 @@ before_install:
 install:
   - composer install --prefer-dist
 
+before_script:
+  - mkdir -p $HOME/.php-cs-fixer
+
 script:
- - vendor/bin/phpunit --configuration phpunit.xml
+  - vendor/bin/phpunit --configuration phpunit.xml
+  - vendor/bin/php-cs-fixer fix --config-file=.php_cs --verbose --diff --dry-run

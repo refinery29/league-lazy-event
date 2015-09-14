@@ -222,7 +222,7 @@ class LazyListenerTest extends \PHPUnit_Framework_TestCase
 
         $listener->getListener();
 
-        $this->assertTrue($listener->isListener($listener));
+        $this->assertTrue($listener->isListener($actualListener));
     }
 
     public function testFromAlias()

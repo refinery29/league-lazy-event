@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "551f0c249089c6ce5cc1a72fff9a1805",
+    "hash": "81c0900cbe1dc2a15d15153ff92d26c2",
     "packages": [],
     "packages-dev": [
         {
@@ -596,6 +596,47 @@
                 "xunit"
             ],
             "time": "2015-08-19 09:14:08"
+        },
+        {
+            "name": "refinery29/php-cs-fixer-config",
+            "version": "0.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/refinery29/php-cs-fixer-config.git",
+                "reference": "049e5a80c18473d5adf6a1232255bd9c0df30879"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/refinery29/php-cs-fixer-config/zipball/049e5a80c18473d5adf6a1232255bd9c0df30879",
+                "reference": "049e5a80c18473d5adf6a1232255bd9c0df30879",
+                "shasum": ""
+            },
+            "require": {
+                "fabpot/php-cs-fixer": "2.0.*@dev",
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "^0.1.2",
+                "phpunit/phpunit": "^4.8.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Refinery29\\CS\\Config\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andreas Möller",
+                    "email": "andreas.moller@refinery29.com"
+                }
+            ],
+            "description": "Provides a configuration for fabpot/php-cs-fixer, used within Refinery29.",
+            "time": "2015-09-04 15:09:45"
         },
         {
             "name": "sebastian/comparator",

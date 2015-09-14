@@ -1,0 +1,28 @@
+language: php
+
+sudo: false
+
+env:
+  global:
+    secure: "q92e8zyuFWPIg7J64GHdaHh9xiJ0seWYn/TWk+hW14EwEFJRFYx97SS6sYQAG7b2QdpeaI4c4jmVmCMniQH6aDTanODILFieFypddirTsSdwTmd5DQcAvnXvj6FnF8RU0fFsjcLpNBWnWtGeG9zeorlyYQzYIXZtYNX4yqfDBDYod6pFw/fJavbRdal4UBZVDQrWfKj8ei2O02cYtWPwlTacM99/QLF3h438NnG6T6uiWjQWGGQ2KmN90hCzviRHYsscsRyPRCfkW5qIsxrm4pRTEDHU/zmB9jFTGj8QDzhoMEm1947trVWxH9UGIQXYJLI40HQkOPXAGBByO+AAWkcOuy+SoubFsQJ63p1qmAFuxhsc+0pFVuC6Jl0K64SS6GxQOENXZpLMZ3Jbfc6EmtJeWjt8h73oEAMEz6QKPIV9zdSDITY1Gnms/QWZ5gUzvfqaGWxnF/jRUX7naTIJqAKELVQohHxhYlkYqv9p++tNlXogm6R+tTOPkN7WjGnKmu+B+DjsQg430VlajkkL8aTWqbzT5RuI5uNYCURz1++gVIZJrVpO+rdjuKVjCCLUevtuAEoq1LEe25oX3vvq6OnftWXhJlzaPDUg+/OA6CN4sXIeZ4n6IKSKg6C7JlmzVMHROLiG9P1x8ZeNG4xQUl5mKrsnN1Lm7dUkDpUONx8="
+
+matrix:
+  include:
+    - php: 5.5
+    - php: 5.6
+    - php: 7
+    - php: hhvm
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+before_install:
+  - composer self-update
+  - composer config github-oauth.github.com $GITHUB_TOKEN
+
+install:
+  - composer install --prefer-dist
+
+script:
+  - composer validate

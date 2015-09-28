@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "eb54dd08b86ecc5ebabfbb1ca99dfd3d",
+    "hash": "eb485d361932de56f33e058a81134706",
+    "content-hash": "66c0fdbe46148968af4e97e91b9c4ef1",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -203,12 +204,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "ead0d6d8f714cf1b60df49800b28a76a96bd9466"
+                "reference": "f6c3fa91e4182f197dc008862aecd24698cb2822"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/ead0d6d8f714cf1b60df49800b28a76a96bd9466",
-                "reference": "ead0d6d8f714cf1b60df49800b28a76a96bd9466",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/f6c3fa91e4182f197dc008862aecd24698cb2822",
+                "reference": "f6c3fa91e4182f197dc008862aecd24698cb2822",
                 "shasum": ""
             },
             "require": {
@@ -254,7 +255,7 @@
                 }
             ],
             "description": "A tool to automatically fix PHP code style",
-            "time": "2015-09-13 20:11:35"
+            "time": "2015-09-27 13:34:13"
         },
         {
             "name": "guzzle/guzzle",
@@ -868,24 +869,24 @@
         },
         {
             "name": "refinery29/php-cs-fixer-config",
-            "version": "0.1.5",
+            "version": "0.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/refinery29/php-cs-fixer-config.git",
-                "reference": "f90e5958991a568e9352119a66b7551b1177bdb0"
+                "reference": "85006570ecd1b4c9d0a8c19b934719f02c110e2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/refinery29/php-cs-fixer-config/zipball/f90e5958991a568e9352119a66b7551b1177bdb0",
-                "reference": "f90e5958991a568e9352119a66b7551b1177bdb0",
+                "url": "https://api.github.com/repos/refinery29/php-cs-fixer-config/zipball/85006570ecd1b4c9d0a8c19b934719f02c110e2d",
+                "reference": "85006570ecd1b4c9d0a8c19b934719f02c110e2d",
                 "shasum": ""
             },
             "require": {
-                "fabpot/php-cs-fixer": "2.0.*@dev",
+                "fabpot/php-cs-fixer": "2.0.*-dev",
                 "php": ">=5.4"
             },
             "require-dev": {
-                "codeclimate/php-test-reporter": "^0.1.2",
+                "codeclimate/php-test-reporter": "0.2.0",
                 "phpunit/phpunit": "^4.8.2"
             },
             "type": "library",
@@ -905,7 +906,7 @@
                 }
             ],
             "description": "Provides a configuration for fabpot/php-cs-fixer, used within Refinery29.",
-            "time": "2015-09-14 12:18:40"
+            "time": "2015-09-28 12:41:00"
         },
         {
             "name": "satooshi/php-coveralls",
@@ -1351,12 +1352,12 @@
             "version": "v2.7.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Config.git",
+                "url": "https://github.com/symfony/config.git",
                 "reference": "5ab9ff48b3cb5b40951a607f77fc1cbfd29edba8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Config/zipball/5ab9ff48b3cb5b40951a607f77fc1cbfd29edba8",
+                "url": "https://api.github.com/repos/symfony/config/zipball/5ab9ff48b3cb5b40951a607f77fc1cbfd29edba8",
                 "reference": "5ab9ff48b3cb5b40951a607f77fc1cbfd29edba8",
                 "shasum": ""
             },
@@ -1401,12 +1402,12 @@
             "version": "v2.7.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Console.git",
-                "reference": "f1f7376766394f409b9b33a57a5675a52f8aad93"
+                "url": "https://github.com/symfony/console.git",
+                "reference": "9ff9032151186bd66ecee727d728f1319f52d1d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/9ff9032151186bd66ecee727d728f1319f52d1d8",
+                "url": "https://api.github.com/repos/symfony/console/zipball/9ff9032151186bd66ecee727d728f1319f52d1d8",
                 "reference": "f1f7376766394f409b9b33a57a5675a52f8aad93",
                 "shasum": ""
             },
@@ -1458,12 +1459,12 @@
             "version": "v2.7.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/EventDispatcher.git",
+                "url": "https://github.com/symfony/event-dispatcher.git",
                 "reference": "b58c916f1db03a611b72dd702564f30ad8fe83fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/b58c916f1db03a611b72dd702564f30ad8fe83fa",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/b58c916f1db03a611b72dd702564f30ad8fe83fa",
                 "reference": "b58c916f1db03a611b72dd702564f30ad8fe83fa",
                 "shasum": ""
             },
@@ -1516,12 +1517,12 @@
             "version": "v2.7.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Filesystem.git",
+                "url": "https://github.com/symfony/filesystem.git",
                 "reference": "f079e9933799929584200b9a926f72f29e291654"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Filesystem/zipball/f079e9933799929584200b9a926f72f29e291654",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/f079e9933799929584200b9a926f72f29e291654",
                 "reference": "f079e9933799929584200b9a926f72f29e291654",
                 "shasum": ""
             },

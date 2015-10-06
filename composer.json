@@ -27,7 +27,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Refinery29\\Event\\Test\\": "tests"
+            "Refinery29\\Event\\Test\\": "test"
         }
     }
 }

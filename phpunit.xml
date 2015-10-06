@@ -17,7 +17,7 @@
 >
     <testsuites>
         <testsuite name="Unit Tests">
-            <directory>tests</directory>
+            <directory>test</directory>
         </testsuite>
     </testsuites>
     <filter>

@@ -30,8 +30,8 @@ class LazyListener implements ListenerInterface
      */
     public function __construct($alias, ContainerInterface $container)
     {
-        $this->container = $container;
         $this->alias = $alias;
+        $this->container = $container;
     }
 
     /**

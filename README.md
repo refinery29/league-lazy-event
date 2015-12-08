@@ -55,3 +55,7 @@ $emitter->emit(ContentChangedEvent::class, new ContentChangedEvent(
 ```
 
 :+1: Listeners are only ever fetched from the container when the event is handled.
+
+## Contributing
+
+Please refer to [`CONTRIBUTING.md`](CONTRIBUTING.md).

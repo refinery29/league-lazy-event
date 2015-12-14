@@ -4,6 +4,7 @@ namespace Refinery29\Event;
 
 use Interop\Container\ContainerInterface;
 use Interop\Container\Exception\ContainerException;
+use League\Event\CallbackListener;
 use League\Event\EventInterface;
 use League\Event\ListenerInterface;
 
@@ -49,14 +50,30 @@ class LazyListener implements ListenerInterface
                 ));
             }
 
-            if (!$listener instanceof ListenerInterface) {
-                throw new \BadMethodCallException('Fetched listener does not implement ListenerInterface');
-            }
-
-            $this->listener = $listener;
+            $this->listener = $this->ensureListener($listener);
         }
 
         return $this->listener;
+    }
+
+    /**
+     * @param ListenerInterface|callable $listener
+     *
+     * @throws \BadMethodCallException
+     *
+     * @return ListenerInterface
+     */
+    private function ensureListener($listener)
+    {
+        if ($listener instanceof ListenerInterface) {
+            return $listener;
+        }
+
+        if (is_callable($listener)) {
+            return CallbackListener::fromCallable($listener);
+        }
+
+        throw new \BadMethodCallException('Fetched listener neither implements ListenerInterface nor is a callable');
     }
 
     public function handle(EventInterface $event)
@@ -68,6 +85,10 @@ class LazyListener implements ListenerInterface
     {
         if ($listener instanceof LazyListener) {
             return $this === $listener;
+        }
+
+        if ($this->listener instanceof CallbackListener) {
+            return $this->listener->isListener($listener);
         }
 
         if ($this->listener !== null) {

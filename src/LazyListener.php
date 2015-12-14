@@ -2,6 +2,7 @@
 
 namespace Refinery29\Event;
 
+use BadMethodCallException;
 use Interop\Container\ContainerInterface;
 use Interop\Container\Exception\ContainerException;
 use League\Event\CallbackListener;
@@ -36,6 +37,8 @@ class LazyListener implements ListenerInterface
     }
 
     /**
+     * @throws BadMethodCallException
+     *
      * @return ListenerInterface
      */
     public function getListener()

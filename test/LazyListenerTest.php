@@ -1,6 +1,6 @@
 <?php
 
-namespace Refinery29\Test\Unit\Event;
+namespace Refinery29\Test\Event;
 
 use BadMethodCallException;
 use Interop\Container\ContainerInterface;

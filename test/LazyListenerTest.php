@@ -1,13 +1,11 @@
 <?php
 
-namespace Refinery29\Test\Event;
+namespace Refinery29\Event\Test;
 
 use Interop\Container\ContainerInterface;
 use League\Event\EventInterface;
 use League\Event\ListenerInterface;
 use Refinery29\Event\LazyListener;
-use Refinery29\Event\Test\ContainerException;
-use Refinery29\Event\Test\NotFoundException;
 use stdClass;
 
 class LazyListenerTest extends \PHPUnit_Framework_TestCase

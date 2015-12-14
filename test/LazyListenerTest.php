@@ -2,7 +2,6 @@
 
 namespace Refinery29\Test\Event;
 
-use BadMethodCallException;
 use Interop\Container\ContainerInterface;
 use League\Event\EventInterface;
 use League\Event\ListenerInterface;

@@ -20,7 +20,7 @@ $ make test
 
 to run all of the test suites.
 
-### Coding Standards
+## Coding Standards
 
 We are using [`fabpot/php-cs-fixer`](https://github.com/FriendsOfPHP/PHP-CS-Fixer) to enforce coding standards.
 
@@ -31,3 +31,13 @@ $ make cs
 ```
 
 to automatically fix coding standard violations.
+
+## Extra lazy?
+
+Run
+
+```
+$ make it
+```
+
+to run both coding standards check and tests!

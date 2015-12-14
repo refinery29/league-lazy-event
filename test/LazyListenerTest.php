@@ -3,6 +3,7 @@
 namespace Refinery29\Event\Test;
 
 use Interop\Container\ContainerInterface;
+use League\Event\CallbackListener;
 use League\Event\EventInterface;
 use League\Event\ListenerInterface;
 use Refinery29\Event\LazyListener;
@@ -60,7 +61,7 @@ class LazyListenerTest extends \PHPUnit_Framework_TestCase
         $listener->getListener();
     }
 
-    public function testGetListenerWhenActualListenerDoesNotImplementListenerInterface()
+    public function testGetListenerWhenActualListenerNeitherImplementsListenerInterfaceNorIsACallable()
     {
         $this->setExpectedException('BadMethodCallException');
 
@@ -118,6 +119,32 @@ class LazyListenerTest extends \PHPUnit_Framework_TestCase
         $actualListener = $listener->getListener();
 
         $this->assertSame($actualListener, $listener->getListener());
+    }
+
+    public function testGetListenerTurnsCallableIntoCallbackListener()
+    {
+        $alias = 'foo';
+
+        $actualListener = function (EventInterface $event) {
+            return $event->getName();
+        };
+
+        $container = $this->getContainerMock();
+
+        $container
+            ->expects($this->once())
+            ->method('get')
+            ->with($this->identicalTo($alias))
+            ->willReturn($actualListener)
+        ;
+
+        $listener = new LazyListener($alias, $container);
+
+        /* @var CallbackListener $callbackListener */
+        $callbackListener = $listener->getListener();
+
+        $this->assertInstanceOf('League\Event\CallbackListener', $callbackListener);
+        $this->assertSame($actualListener, $callbackListener->getCallback());
     }
 
     public function testHandleLetsActualListenerHandleEvent()
@@ -203,6 +230,30 @@ class LazyListenerTest extends \PHPUnit_Framework_TestCase
     public function testIsListenerWhenComparedListenerIsActualListenerAndHasBeenFetchedFromContainer()
     {
         $actualListener = $this->getListenerMock();
+
+        $alias = 'foo';
+
+        $container = $this->getContainerMock();
+
+        $container
+            ->expects($this->once())
+            ->method('get')
+            ->with($this->identicalTo($alias))
+            ->willReturn($actualListener)
+        ;
+
+        $listener = new LazyListener($alias, $container);
+
+        $listener->getListener();
+
+        $this->assertTrue($listener->isListener($actualListener));
+    }
+
+    public function testIsListenerWhenComparedListenerIsActualListenerCallableAndHasBeenFetchedFromContainer()
+    {
+        $actualListener = function (EventInterface $event) {
+            return $event->getName();
+        };
 
         $alias = 'foo';
 

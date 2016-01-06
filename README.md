@@ -59,3 +59,7 @@ $emitter->emit(ContentChangedEvent::class, new ContentChangedEvent(
 ## Contributing
 
 Please refer to [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
+## License
+
+This package is licensed using the MIT License.

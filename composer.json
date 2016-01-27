@@ -9,6 +9,8 @@
             "email": "andreas.moller@refinery29.com"
         }
     ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
         "php": ">=5.4",
         "container-interop/container-interop": "^1.1",
@@ -16,9 +18,8 @@
     },
     "require-dev": {
         "codeclimate/php-test-reporter": "0.2.0",
-        "fabpot/php-cs-fixer": "2.0.*-dev",
         "phpunit/phpunit": "^4.8.7",
-        "refinery29/php-cs-fixer-config": "0.2.8"
+        "refinery29/php-cs-fixer-config": "0.3.4"
     },
     "autoload": {
         "psr-4": {

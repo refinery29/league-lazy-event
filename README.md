@@ -58,7 +58,11 @@ $emitter->emit(ContentChangedEvent::class, new ContentChangedEvent(
 
 ## Contributing
 
-Please refer to [`CONTRIBUTING.md`](CONTRIBUTING.md).
+Please have a look at [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Code of Conduct
+
+Please have a look at [CONDUCT.md](CONDUCT.md).
 
 ## License
 

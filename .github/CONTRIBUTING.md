@@ -2,15 +2,11 @@
 
 We're using [Travis CI](https://travis-ci.com) as a continuous integration system.
  
-For details, see [`.travis.yml`](.travis.yml). 
+For details, see [`.travis.yml`](../.travis.yml). 
  
 ## Tests
 
-We're using 
-
-* [`phpunit/phpunit`](https://github.com/sebastianbergmann/phpunit)
- 
-to drive the development.
+We're using [`phpunit/phpunit`](https://github.com/sebastianbergmann/phpunit) to drive the development.
 
 Run
 
@@ -18,7 +14,7 @@ Run
 $ make test
 ```
 
-to run all of the test suites.
+to run all the tests.
 
 ## Coding Standards
 
@@ -37,7 +33,7 @@ to automatically fix coding standard violations.
 Run
 
 ```
-$ make it
+$ make
 ```
 
 to run both coding standards check and tests!

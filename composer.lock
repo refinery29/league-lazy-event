@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a3f35b7e59a1d8ebf957815a376bb3cc",
-    "content-hash": "274eee138e3060057af1f9a11455fa74",
+    "hash": "a162639e59db020fdc4059b7ca5e289f",
+    "content-hash": "90d474d6e79767e5fa7888b8479bdf87",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -199,7 +199,7 @@
             "time": "2015-06-14 21:17:01"
         },
         {
-            "name": "fabpot/php-cs-fixer",
+            "name": "friendsofphp/php-cs-fixer",
             "version": "v2.0.0-alpha",
             "source": {
                 "type": "git",
@@ -870,20 +870,20 @@
         },
         {
             "name": "refinery29/php-cs-fixer-config",
-            "version": "0.4.13",
+            "version": "0.4.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/refinery29/php-cs-fixer-config.git",
-                "reference": "8359702220ecd8b1171a54638fd7f7af5df5646e"
+                "reference": "63fe01a090d915bdfc2ba27e9f5d030c32287858"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/refinery29/php-cs-fixer-config/zipball/8359702220ecd8b1171a54638fd7f7af5df5646e",
-                "reference": "8359702220ecd8b1171a54638fd7f7af5df5646e",
+                "url": "https://api.github.com/repos/refinery29/php-cs-fixer-config/zipball/63fe01a090d915bdfc2ba27e9f5d030c32287858",
+                "reference": "63fe01a090d915bdfc2ba27e9f5d030c32287858",
                 "shasum": ""
             },
             "require": {
-                "fabpot/php-cs-fixer": "2.0.0-alpha",
+                "friendsofphp/php-cs-fixer": "2.0.0-alpha",
                 "php": "^5.5 || ^7.0"
             },
             "require-dev": {
@@ -906,8 +906,8 @@
                     "email": "andreas.moller@refinery29.com"
                 }
             ],
-            "description": "Provides a configuration for fabpot/php-cs-fixer, used within Refinery29.",
-            "time": "2016-05-27 08:13:41"
+            "description": "Provides a configuration for friendsofphp/php-cs-fixer, used within Refinery29.",
+            "time": "2016-05-27 14:46:49"
         },
         {
             "name": "satooshi/php-coveralls",

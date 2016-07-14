@@ -40,8 +40,7 @@ class LazyListenerTest extends \PHPUnit_Framework_TestCase
             ->expects($this->once())
             ->method('get')
             ->with($this->identicalTo($alias))
-            ->willThrowException(new NotFoundException('Not found'))
-        ;
+            ->willThrowException(new NotFoundException('Not found'));
 
         $listener = new LazyListener($alias, $container);
 
@@ -60,8 +59,7 @@ class LazyListenerTest extends \PHPUnit_Framework_TestCase
             ->expects($this->once())
             ->method('get')
             ->with($this->identicalTo($alias))
-            ->willThrowException(new ContainerException('Sorry!'))
-        ;
+            ->willThrowException(new ContainerException('Sorry!'));
 
         $listener = new LazyListener($alias, $container);
 
@@ -80,8 +78,7 @@ class LazyListenerTest extends \PHPUnit_Framework_TestCase
             ->expects($this->once())
             ->method('get')
             ->with($this->identicalTo($alias))
-            ->willReturn(new stdClass())
-        ;
+            ->willReturn(new stdClass());
 
         $listener = new LazyListener($alias, $container);
 
@@ -100,8 +97,7 @@ class LazyListenerTest extends \PHPUnit_Framework_TestCase
             ->expects($this->once())
             ->method('get')
             ->with($this->identicalTo($alias))
-            ->willReturn($actualListener)
-        ;
+            ->willReturn($actualListener);
 
         $listener = new LazyListener($alias, $container);
 
@@ -118,8 +114,7 @@ class LazyListenerTest extends \PHPUnit_Framework_TestCase
             ->expects($this->once())
             ->method('get')
             ->with($this->identicalTo($alias))
-            ->willReturn($this->getListenerMock())
-        ;
+            ->willReturn($this->getListenerMock());
 
         $listener = new LazyListener($alias, $container);
 
@@ -142,8 +137,7 @@ class LazyListenerTest extends \PHPUnit_Framework_TestCase
             ->expects($this->once())
             ->method('get')
             ->with($this->identicalTo($alias))
-            ->willReturn($actualListener)
-        ;
+            ->willReturn($actualListener);
 
         $listener = new LazyListener($alias, $container);
 
@@ -163,8 +157,7 @@ class LazyListenerTest extends \PHPUnit_Framework_TestCase
         $actualListener
             ->expects($this->once())
             ->method('handle')
-            ->with($this->identicalTo($event))
-        ;
+            ->with($this->identicalTo($event));
 
         $alias = 'foo';
 
@@ -174,8 +167,7 @@ class LazyListenerTest extends \PHPUnit_Framework_TestCase
             ->expects($this->once())
             ->method('get')
             ->with($this->identicalTo($alias))
-            ->willReturn($actualListener)
-        ;
+            ->willReturn($actualListener);
 
         $listener = new LazyListener($alias, $container);
 
@@ -190,8 +182,7 @@ class LazyListenerTest extends \PHPUnit_Framework_TestCase
 
         $container
             ->expects($this->never())
-            ->method($this->anything())
-        ;
+            ->method($this->anything());
 
         $listener = new LazyListener($alias, $container);
 
@@ -208,8 +199,7 @@ class LazyListenerTest extends \PHPUnit_Framework_TestCase
 
         $container
             ->expects($this->never())
-            ->method($this->anything())
-        ;
+            ->method($this->anything());
 
         $listener = new LazyListener($alias, $container);
 
@@ -226,8 +216,7 @@ class LazyListenerTest extends \PHPUnit_Framework_TestCase
 
         $container
             ->expects($this->never())
-            ->method($this->anything())
-        ;
+            ->method($this->anything());
 
         $listener = new LazyListener($alias, $container);
 
@@ -246,8 +235,7 @@ class LazyListenerTest extends \PHPUnit_Framework_TestCase
             ->expects($this->once())
             ->method('get')
             ->with($this->identicalTo($alias))
-            ->willReturn($actualListener)
-        ;
+            ->willReturn($actualListener);
 
         $listener = new LazyListener($alias, $container);
 
@@ -270,8 +258,7 @@ class LazyListenerTest extends \PHPUnit_Framework_TestCase
             ->expects($this->once())
             ->method('get')
             ->with($this->identicalTo($alias))
-            ->willReturn($actualListener)
-        ;
+            ->willReturn($actualListener);
 
         $listener = new LazyListener($alias, $container);
 
@@ -292,8 +279,7 @@ class LazyListenerTest extends \PHPUnit_Framework_TestCase
             ->expects($this->once())
             ->method('get')
             ->with($this->identicalTo($alias))
-            ->willReturn($actualListener)
-        ;
+            ->willReturn($actualListener);
 
         $listener = LazyListener::fromAlias($alias, $container);
 
@@ -323,8 +309,7 @@ class LazyListenerTest extends \PHPUnit_Framework_TestCase
     {
         return $this->getMockBuilder('Refinery29\Event\LazyListener')
             ->disableOriginalConstructor()
-            ->getMock()
-        ;
+            ->getMock();
     }
 
     /**

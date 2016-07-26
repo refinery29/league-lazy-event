@@ -4,9 +4,68 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "892220c7dadc8a696c1975fafaf1828a",
-    "content-hash": "55906ddd408dd829d264328704fefcb1",
+    "hash": "edbb6c32b29a44be2ebca5ca45b46a62",
+    "content-hash": "de714c3d83bbfe26ba3dbadaf5843c2d",
     "packages": [
+        {
+            "name": "beberlei/assert",
+            "version": "v2.6.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/beberlei/assert.git",
+                "reference": "9c86caae1354c663cc6e24032ae7c3d0154ec331"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/beberlei/assert/zipball/9c86caae1354c663cc6e24032ae7c3d0154ec331",
+                "reference": "9c86caae1354c663cc6e24032ae7c3d0154ec331",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "@stable"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Assert": "lib/"
+                },
+                "files": [
+                    "lib/Assert/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Richard Quadling",
+                    "email": "rquadling@gmail.com",
+                    "role": "Collaborator"
+                }
+            ],
+            "description": "Thin assertion library for input validation in business models.",
+            "keywords": [
+                "assert",
+                "assertion",
+                "validation"
+            ],
+            "time": "2016-07-26 00:20:59"
+        },
         {
             "name": "container-interop/container-interop",
             "version": "1.1.0",

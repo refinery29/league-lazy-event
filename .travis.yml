@@ -16,7 +16,6 @@ matrix:
       env: WITH_CS=true
     - php: 7.1
       env: WITH_COVERAGE=true
-    - php: hhvm
 
 cache:
   directories:

@@ -3,8 +3,10 @@
 [![Build Status](https://travis-ci.org/refinery29/league-lazy-event.svg?branch=master)](https://travis-ci.org/refinery29/league-lazy-event)
 [![Code Climate](https://codeclimate.com/github/refinery29/league-lazy-event/badges/gpa.svg)](https://codeclimate.com/github/refinery29/league-lazy-event)
 [![Test Coverage](https://codeclimate.com/github/refinery29/league-lazy-event/badges/coverage.svg)](https://codeclimate.com/github/refinery29/league-lazy-event/coverage)
+[![Latest Stable Version](https://poser.pugx.org/refinery29/league-lazy-event/v/stable)](https://packagist.org/packages/refinery29/league-lazy-event)
+[![Total Downloads](https://poser.pugx.org/refinery29/league-lazy-event/downloads)](https://packagist.org/packages/refinery29/league-lazy-event)
 
-This repository provides a `LazyListener` for use with [`league/event`](http://github.com/thephpleague/event), which 
+This repository provides a `LazyListener` for use with [`league/event`](http://github.com/thephpleague/event), which
 allows for lazy fetching of an actual listener from the composed container.
 
 ## Installation
@@ -49,7 +51,7 @@ Trigger your events as needed!
 
 ```php
 $emitter->emit(ContentChangedEvent::class, new ContentChangedEvent(
-    $url, 
+    $url,
     new DateTimeImmutable()
 );
 ```

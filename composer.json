@@ -21,7 +21,8 @@
     "require-dev": {
         "codeclimate/php-test-reporter": "0.4.4",
         "phpunit/phpunit": "^4.8.35",
-        "refinery29/php-cs-fixer-config": "0.6.7"
+        "refinery29/php-cs-fixer-config": "0.6.7",
+        "refinery29/test-util": "0.10.5"
     },
     "autoload": {
         "psr-4": {

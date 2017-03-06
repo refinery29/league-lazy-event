@@ -9,8 +9,8 @@
 
 namespace Refinery29\Event\Test\Unit;
 
-use Interop\Container\Exception;
+use Psr\Container;
 
-class ContainerException extends \Exception implements Exception\ContainerException
+class ContainerException extends \Exception implements Container\ContainerExceptionInterface
 {
 }

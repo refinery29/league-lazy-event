@@ -15,8 +15,8 @@
     },
     "require": {
         "php": "^5.5 || ^7.0",
-        "container-interop/container-interop": "^1.1",
-        "league/event": "^2.1.2"
+        "league/event": "^2.1.2",
+        "psr/container": "^1.0.0"
     },
     "require-dev": {
         "codeclimate/php-test-reporter": "0.4.4",

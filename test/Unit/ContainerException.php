@@ -7,7 +7,7 @@
  * the LICENSE file that was distributed with this source code.
  */
 
-namespace Refinery29\Event\Test;
+namespace Refinery29\Event\Test\Unit;
 
 use Interop\Container\Exception;
 

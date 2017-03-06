@@ -10,11 +10,10 @@
 namespace Refinery29\Event;
 
 use BadMethodCallException;
-use Interop\Container\ContainerInterface;
-use Interop\Container\Exception\ContainerException;
 use League\Event\CallbackListener;
 use League\Event\EventInterface;
 use League\Event\ListenerInterface;
+use Psr\Container;
 
 class LazyListener implements ListenerInterface
 {
@@ -24,7 +23,7 @@ class LazyListener implements ListenerInterface
     private $alias;
 
     /**
-     * @var ContainerInterface
+     * @var Container\ContainerInterface
      */
     private $container;
 
@@ -34,10 +33,10 @@ class LazyListener implements ListenerInterface
     private $listener;
 
     /**
-     * @param string             $alias
-     * @param ContainerInterface $container
+     * @param string                       $alias
+     * @param Container\ContainerInterface $container
      */
-    public function __construct($alias, ContainerInterface $container)
+    public function __construct($alias, Container\ContainerInterface $container)
     {
         $this->alias = $alias;
         $this->container = $container;
@@ -53,7 +52,7 @@ class LazyListener implements ListenerInterface
         if ($this->listener === null) {
             try {
                 $listener = $this->container->get($this->alias);
-            } catch (ContainerException $exception) {
+            } catch (Container\ContainerExceptionInterface $exception) {
                 throw new \BadMethodCallException(sprintf(
                     'Unable to fetch a service for alias "%s" from the container',
                     $this->alias
@@ -109,12 +108,12 @@ class LazyListener implements ListenerInterface
     }
 
     /**
-     * @param string             $alias
-     * @param ContainerInterface $container
+     * @param string                       $alias
+     * @param Container\ContainerInterface $container
      *
      * @return static
      */
-    public static function fromAlias($alias, ContainerInterface $container)
+    public static function fromAlias($alias, Container\ContainerInterface $container)
     {
         return new static($alias, $container);
     }

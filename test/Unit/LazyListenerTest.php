@@ -9,10 +9,10 @@
 
 namespace Refinery29\Event\Test\Unit;
 
-use Interop\Container\ContainerInterface;
 use League\Event\CallbackListener;
 use League\Event\EventInterface;
 use League\Event\ListenerInterface;
+use Psr\Container;
 use Refinery29\Event\LazyListener;
 use stdClass;
 
@@ -287,11 +287,11 @@ class LazyListenerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @return \PHPUnit_Framework_MockObject_MockObject|ContainerInterface
+     * @return \PHPUnit_Framework_MockObject_MockObject|Container\ContainerInterface
      */
     private function getContainerMock()
     {
-        return $this->getMockBuilder('Interop\Container\ContainerInterface')->getMock();
+        return $this->getMockBuilder('Psr\Container\ContainerInterface')->getMock();
     }
 
     /**

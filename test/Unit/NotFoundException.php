@@ -9,8 +9,8 @@
 
 namespace Refinery29\Event\Test\Unit;
 
-use Interop\Container\Exception;
+use Psr\Container;
 
-class NotFoundException extends \Exception implements Exception\NotFoundException
+class NotFoundException extends \Exception implements Container\NotFoundExceptionInterface
 {
 }
